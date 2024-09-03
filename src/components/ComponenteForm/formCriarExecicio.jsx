@@ -4,7 +4,7 @@ import './style.css';
 
 function formCriarExercicio() {
     return <div className="container">
-        <form>
+        <form className="formCriarExercicio">
             <h1>CRIAR EXERCÍCIO</h1>
             <input type="text" placeholder="DIGITE O TEMA" className="input" />
             <input type="number" placeholder="PERGUNTAS:" className="input" />

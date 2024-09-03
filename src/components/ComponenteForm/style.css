@@ -3,15 +3,7 @@
     src: url('/src/fonts/Kadwa-Regular.ttf');
 }
 
-.container{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-form{
+.formCriarExercicio{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -22,7 +14,7 @@ form{
     border-radius: 20px ;
 }
 
-.container form h1{
+.container .formCriarExercicio h1{
     margin-bottom: 20px;
     font-size: 20px;
     font-family: 'Kadwa' ;

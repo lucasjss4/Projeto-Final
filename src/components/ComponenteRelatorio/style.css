@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Kadwa';
+    src: url('/src/fonts/Kadwa-bold.ttf');
+}
+
+.fundo{
+    margin-top: 70px;
+    width: 80%;
+    height: 100%;
+    border: 1px solid #000;
+    background-color: #EFEFEF;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.resumoContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resumo{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.resumo p{
+    border: 3px solid #A4A4A4 ;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #e9e9e9;
+    font-family: 'Kadwa';
+    font-size: 24px;
+}
+
+.img{
+    width: 50px;
+    height: 40px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+.img img{
+    width: 20px;
+    height: 20px;
+}
+
+.grafico{
+    width: 250px;
+    height: 250px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background: conic-gradient(#FF0000 0 180deg, #31C626 180deg 360deg );
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.containerErrosEAcertos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.acertos , .erros{
+    width: 45%;
+    height: 150px;
+    border: 2px solid #A4A4A4;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.acertos #porcem, .erros #porcem{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kadwa';
+    padding: 5px 0px;
+    border-bottom: 2px solid #A4A4A4 ;
+}
+
+.acertos .quantidade, .erros .quantidade{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.acertos .quantidade p, .erros .quantidade p{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Kadwa';
+    font-size: 12px;
+}
+
+.detalhamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    height: 90%;
+    border: 2px solid #A4A4A4;
+    border-radius: 20px;
+}
+
+.detalhamentoAcertosEErros{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.detalhamentoAcertosEErros button{
+    width: 45%;
+    height: 50px;
+    font-size: 16px;
+    font-family: 'Kadwa';
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.detalhamentoAcertosEErros #acertos{
+    background-color: #31C626;
+    border: 2px solid #0C4F13;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.detalhamentoAcertosEErros #erros{
+    background-color: #FF0000;
+    border: 2px solid #6C1818;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.questoes{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-bottom: 3px solid #A4A4A4;
+    padding-bottom: 10px;
+}
+
+.questoes p{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Kadwa';
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.numQuestao{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.numQuestao p{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #0C4F13 ;
+    border-radius: 50%;
+    font-size: 20px;
+    font-family: 'Kadwa';
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #31C626;
+}
+
+.enunciadoQuestao{
+    width: 100%;
+    height: 20px;
+    align-items: center;
+}
+
+.enunciadoQuestao p{
+    margin-left: 30px;
+    font-size: 16px;
+    font-family: 'Kadwa';
+}
+
+.detalhamentoDaQuestao{
+    width: 100%;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.opcoes{
+    margin-left: 30px;
+    width: 40%;
+}
+
+.opcoes ul{
+    list-style: none;
+}
+
+.opcoes ul li{
+    font-size: 16px;
+    font-family: 'Kadwa';
+    margin-top: -10px;
+}
+
+.respostaCorretaExplicacao{
+    width: 60%;
+    height: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.respostaCorreta{
+    width: 70%;
+    height: 30px;
+    border: 2px solid #124B0D;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #31C626;
+}
+
+.respostaCorreta p{
+    color: #fff;
+    font-family: 'Kadwa';
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.explicacao{
+    height: 100px;
+    border: 3px solid #A4A4A4;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Kadwa';
+    background-color: #D9D9D9;
+}
+
+.acerto{
+    border: 2px solid #31C626 !important;
+}

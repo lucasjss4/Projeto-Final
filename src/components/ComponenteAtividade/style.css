@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Kadwa';
+    src: url('/src/fonts/Kadwa-Regular.ttf');
+}
+
+
+#container{
+    flex-direction: column;
+}
+
+.containerQuestao {
+    border: 3px solid black ;
+    width: 60%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.questao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -30px;
+}
+
+.title{
+    position: absolute;
+    border: 3px solid black ;
+    height: 60px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 26px;
+}
+
+.sair{
+    position: relative;
+    border: 1px solid black ;
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #000;
+    cursor: pointer;
+    left: 494px;
+    top: 28px;
+}
+
+.sair img{
+    width: 30px;
+    height: 30px;
+}
+
+.enunciado{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Kadwa';
+}
+
+.resposta{
+    margin-top: 20px;
+    width: 65%;
+    height: 40%;
+}
+
+.resposta form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resposta form button{
+    width: 45%;
+    height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: 'Kadwa';
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#red{
+    background-color: #EB0000;
+    border: 3px solid #a31b1b;
+}
+
+#blue{
+    background-color: #004EEB;
+    border: 3px solid #1B1BA3;
+}
+
+#yellow{
+    background-color: #EBE300;
+    border: 3px solid #A3951B;
+}
+
+#green{
+    background-color: #00EB43;
+    border: 3px solid #1BA32B;
+}
