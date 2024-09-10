@@ -3,124 +3,164 @@
     src: url('/src/fonts/Kadwa-Regular.ttf');
 }
 
-
-#container{
-    flex-direction: column;
+.exercicio{
+    width: 70%;
+    height: 100%;
 }
 
-.containerQuestao {
-    border: 3px solid black ;
-    width: 60%;
-    height: 30%;
+.exercicio .enunciado{
+    padding: 10px 15px;
+    font-family: 'Kadwa';
+    text-align: justify;
+}
+
+.enunciado p{
+    font-size: 17px;
+}
+
+.escolhaResp{
+    height: 60%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 }
 
-.questao{
+.escolhaResp .opcao{
+    border: 2px solid black;
+    height: 50px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 40px;
+}
+
+.escolhaResp .opcao input{
+    margin-right: 10px;
+    margin-left: 20px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input:checked ~ label{
+    background-color: #000;
+}
+
+.escolhaResp .opcao label{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.escolhaResp .opcao p{
+    font-family: 'Kadwa';
+    font-weight: 100;
+}
+
+.questoesResp{
+    border-left: 3px solid #d9d9d9;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.questoesResp img{
+    padding: 10px 10px;
+    width: 25px;
+    height: 25px;
+    filter: invert(100%);
+}
+
+.questoesResp .titleResp{
+    width: 100%;
+}
+
+.questoesResp .titleResp h1{
+    font-family: 'Kadwa';
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.questoesResp .navQuestao{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: -30px;
+    height: 150px;
 }
 
-.title{
-    position: absolute;
-    border: 3px solid black ;
-    height: 60px;
-    width: 400px;
+.navQuestao .number{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #CACACA;
+    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    background-color: #fff;
-    font-size: 26px;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 18px;
 }
 
-.sair{
-    position: relative;
-    border: 1px solid black ;
-    width: 60px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+.F{
     background-color: #000;
-    cursor: pointer;
-    left: 494px;
-    top: 28px;
+    color: #fff;
+    border: 1px solid black !important;
 }
 
-.sair img{
-    width: 30px;
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+}
+
+.buttons button{
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
     height: 30px;
 }
 
-.enunciado{
+.buttons #voltar{
+    width: 120px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #8b8b8b;
+}
+
+.buttons #proximo{
+    width: 160px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+#enviarProva{
+    margin-top: 10px;
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-family: 'Kadwa';
 }
 
-.resposta{
-    margin-top: 20px;
-    width: 65%;
-    height: 40%;
-}
-
-.resposta form {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.resposta form button{
-    width: 45%;
-    height: 80px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
+#enviarProva button{
+    width: 95%;
+    height: 35px;
+    border: 1px solid black;
     font-family: 'Kadwa';
     color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#red{
-    background-color: #EB0000;
-    border: 3px solid #a31b1b;
-}
-
-#blue{
-    background-color: #004EEB;
-    border: 3px solid #1B1BA3;
-}
-
-#yellow{
-    background-color: #EBE300;
-    border: 3px solid #A3951B;
-}
-
-#green{
-    background-color: #00EB43;
-    border: 3px solid #1BA32B;
+    background-color: #000;
+    border-radius: 8px;
 }

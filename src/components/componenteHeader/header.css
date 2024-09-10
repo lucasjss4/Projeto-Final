@@ -9,11 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 15px 50px 15px 25px;
 }
 
 .menu-logo {
-    margin-left: 30px;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -22,6 +21,7 @@
 .logo {
     width: 60px;
     height: 60px;
+    margin-left: 40px;
     margin-right: 20px;
 }
 
@@ -40,3 +40,11 @@
     cursor: pointer;
 }
 
+#menu{
+    cursor: pointer;
+    padding: 5px;
+}
+
+h6{
+    position: absolute;
+}

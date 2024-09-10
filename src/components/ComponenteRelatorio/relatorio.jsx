@@ -1,17 +1,14 @@
 import React from "react";
 import logout from './logout.svg';
-import Header from "../ComponenteHeader/header";
 import './style.css'
 
 function Relatorio() {
     return <div className="container">
         <div className="fundo">
             <div className="resumoContainer">
-                <div className="resumo">
-                    <p>RESUMO</p>
-                    <div className="img"><img src={logout} /></div>
+                <div className="grafico">
+                    <h1>50%</h1>
                 </div>
-                <div className="grafico"></div>
                 <div className="containerErrosEAcertos">
                     <div className="acertos">
                         <p id="porcem">ACERTOS:  50%</p>
