@@ -3,22 +3,28 @@
     src: url('/src/fonts/Kadwa-Regular.ttf');
 }
 
-.exercicio{
-    width: 70%;
-    height: 100%;
+.containerAtividade {
+    width: 100%;
+    display: flex;
 }
 
-.exercicio .enunciado{
+.exercicio {
+    width: 75%;
+    height: 100%;
+    margin-left: 30px;
+}
+
+.exercicio .enunciado {
     padding: 10px 15px;
     font-family: 'Kadwa';
     text-align: justify;
 }
 
-.enunciado p{
+.enunciado p {
     font-size: 17px;
 }
 
-.escolhaResp{
+.escolhaResp {
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -26,7 +32,7 @@
     justify-content: center;
 }
 
-.escolhaResp .opcao{
+.escolhaResp .opcao {
     border: 2px solid black;
     height: 50px;
     width: 95%;
@@ -37,7 +43,7 @@
     border-radius: 40px;
 }
 
-.escolhaResp .opcao input{
+.escolhaResp .opcao input {
     margin-right: 10px;
     margin-left: 20px;
     position: absolute;
@@ -45,11 +51,11 @@
     cursor: pointer;
 }
 
-input:checked ~ label{
+input:checked~label {
     background-color: #000;
 }
 
-.escolhaResp .opcao label{
+.escolhaResp .opcao label {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -59,65 +65,67 @@ input:checked ~ label{
     margin-right: 20px;
 }
 
-.escolhaResp .opcao p{
+.escolhaResp .opcao p {
     font-family: 'Kadwa';
     font-weight: 100;
 }
 
-.questoesResp{
+.questoesResp {
     border-left: 3px solid #d9d9d9;
     height: 100%;
-    width: 20%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
-.questoesResp img{
+.questoesResp img {
     padding: 10px 10px;
     width: 25px;
     height: 25px;
     filter: invert(100%);
 }
 
-.questoesResp .titleResp{
+.questoesResp .titleResp {
     width: 100%;
 }
 
-.questoesResp .titleResp h1{
+.questoesResp .titleResp h1 {
     font-family: 'Kadwa';
     font-size: 18px;
     margin-left: 15px;
 }
 
-.questoesResp .navQuestao{
+.questoesResp .navQuestao {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 150px;
 }
 
-.navQuestao .number{
-    width: 35px;
-    height: 35px;
+.navQuestao .number {
+    width: 40px;
+    height: 40px;
     border: 2px solid #CACACA;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-size: 18px;
+    cursor: pointer;
 }
 
-.F{
+.F {
     background-color: #000;
     color: #fff;
     border: 1px solid black !important;
 }
 
-.buttons{
+.buttons {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -125,29 +133,33 @@ input:checked ~ label{
     height: 40px;
 }
 
-.buttons button{
+.buttons button {
     font-size: 12px;
     padding: 5px;
     border-radius: 8px;
     font-weight: bold;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.buttons #voltar{
+.buttons #voltar {
     width: 120px;
     background-color: #fff;
     color: #000;
     border: 2px solid #8b8b8b;
 }
 
-.buttons #proximo{
+.buttons #proximo {
     width: 160px;
     background-color: #000;
     color: #fff;
     border: 2px solid #000;
 }
 
-#enviarProva{
+#enviarProva {
     margin-top: 10px;
     width: 100%;
     display: flex;
@@ -155,7 +167,7 @@ input:checked ~ label{
     align-items: center;
 }
 
-#enviarProva button{
+#enviarProva button {
     width: 95%;
     height: 35px;
     border: 1px solid black;

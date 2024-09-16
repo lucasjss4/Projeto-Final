@@ -4,7 +4,7 @@ import './style.css';
 
 
 function Atividade() {
-    return <div className="container" id="container">
+    return <div className="containerAtividade">
         <div className="exercicio">
             <div className="enunciado">
                 <h1>Questão 7:</h1>

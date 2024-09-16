@@ -48,3 +48,43 @@
 h6{
     position: absolute;
 }
+
+.addTurma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addTurma #inputTurma{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.addTurma p{
+    position: absolute; 
+    margin-top: 90px;
+    margin-left: -190px;
+    border: 2px solid #B6B6B6;
+    visibility: hidden;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    border-radius: 10px 0px 10px 10px;
+    background-color: #EDEDED;
+    cursor: pointer;
+}
+
+#inputTurma:checked ~ p{
+    visibility: visible;
+}
+
+#inputTurma:checked ~ svg{
+    border-radius: 50%;
+    background-color: #919191;
+    border: 1px solid #919191;
+}
