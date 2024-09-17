@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Menu from "../components/ComponenteMenu/Menu";
 import Header from "../components/ComponenteHeader/header";
 import Busca from "../components/ComponenteBusca/Busca";
-import FormCriarTurma from "../components/ComponenteTurma/FormCriarTurma";
+import FormCriarTurma from "../components/ComponenteCriarTurma/FormCriarTurma";
+import Turma from "../components/ComponenteTurma/Turma";
+
 
 const PageHome = () => {
     const [isSideBarOpen, setSideBarOpen] = useState(false);
@@ -17,12 +19,25 @@ const PageHome = () => {
         setCreateClass(prevState => !prevState);
     }
 
+    const closeAddClass = () => {
+        setCreateClass(prevState => !prevState);
+    }
+
+    const [isClass, setClass] = useState(false);
+
+    const [isTeacher, setTeacher] = useState(true);
+
     return <>
-        {isCreateClass && <FormCriarTurma /> }
-        <Header toggleSideBar={toggleSideBar}  openAddClass={openAddClass} />
-        <div className="container">
+        {isCreateClass && <FormCriarTurma closeAddClas={closeAddClass} />}
+        <Header toggleSideBar={toggleSideBar} openAddClass={openAddClass} isTeacher={isTeacher} />
+        <div className="container"> 
             <Menu isOpen={isSideBarOpen} />
-            <Busca />
+            <div className="content">
+                <Busca isClass={isClass} />
+                <div className="contentTurma">
+                    <Turma />
+                </div>
+            </div>
         </div>
     </>
 }

@@ -3,8 +3,8 @@ import logout from './logout.svg';
 import './style.css'
 
 function Relatorio() {
-    return <div className="container">
-        <div className="fundo">
+    return <div>
+        <div className="containerRelatorio">
             <div className="resumoContainer">
                 <div className="grafico">
                     <h1>50%</h1>
@@ -69,11 +69,14 @@ function Relatorio() {
                     <p>19</p>
                     <p className="acerto">20</p>
                 </div>
-                <div className="numQuestao">
-                    <p>1</p>
-                </div>
                 <div className="enunciadoQuestao">
-                    <p>Qual é o valor de x que satisfaz a equação 3 -5=163x-5=16?</p>
+                    <div className="numQuestao">
+                        <p>1</p>
+                    </div>
+                    <p id="enunciado">Qual é o valor de x que satisfaz a equação 3 -5=163x-5=16?</p>
+                    <div className="respostaCorreta">
+                        <p>Resposta correta: A - 7</p>
+                    </div>
                 </div>
                 <div className="detalhamentoDaQuestao">
                     <div className="opcoes">
@@ -86,9 +89,6 @@ function Relatorio() {
                         </ul>
                     </div>
                     <div className="respostaCorretaExplicacao">
-                        <div className="respostaCorreta">
-                            <p>Resposta correta: A - 7</p>
-                        </div>
                         <div className="explicacao">
                             Para resolver a equação, você pode seguir os seguintes passos:<br />
                             Adicione 5 a ambos os lados da equação: 3x−5+5=16+5<br />

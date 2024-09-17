@@ -4,10 +4,11 @@
 }
 
 .menuBar{
-    height: 87vh;
+    height: 100%;
     width: 200px;
     border-right: 2px solid #D9D9D9;
     border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .menuItem{

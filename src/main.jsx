@@ -2,20 +2,21 @@ import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Header from './components/ComponenteHeader/header'
 import PageAtividade from './pages/PageAtividade';
-import Busca from './components/ComponenteBusca/Busca';
 import PageHome from './pages/PageHome';
-import FormCriarTurma from './components/ComponenteTurma/FormCriarTurma';
+import PageRelatorio from './pages/PageRelatorio';
+import PageGerarAtividade from './pages/PageGerarAtividade';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/atividade' element={<PageAtividade />} />
+        <Route path='/' element={<PageHome />} />
+        <Route path='/relatorio' element={<PageRelatorio />} />
+        <Route path='/turma' element={<PageGerarAtividade />} />
       </Routes>
-    </BrowserRouter> */}
-      <PageHome />
+    </BrowserRouter>
   </StrictMode>
 )

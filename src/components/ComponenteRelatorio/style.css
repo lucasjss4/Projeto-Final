@@ -3,32 +3,21 @@
     src: url('/src/fonts/Kadwa-bold.ttf');
 }
 
-.fundo {
-    margin-top: 70px;
-    width: 80%;
+.containerRelatorio {
+    width: 100%;
     height: 100%;
     background-color: #fff;
     border-radius: 30px;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 0;
 }
 
-.img {
-    width: 50px;
-    height: 40px;
-    border: 3px solid black;
+.resumoContainer{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #000;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    cursor: pointer;
-}
-
-.img img {
-    width: 20px;
-    height: 20px;
+    margin-top: 50px;
 }
 
 .grafico {
@@ -43,11 +32,11 @@
 }
 
 .grafico h1{
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     background-color: #fff;
-    border: 10px #000 solid;
+    border: 8px #000 solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +50,7 @@
 
 .acertos,
 .erros {
-    width: 45%;
+    width: 40%;
     height: 150px;
     border: 2px solid #A4A4A4;
     border-radius: 30px;
@@ -95,8 +84,8 @@
 
 .acertos .quantidade p,
 .erros .quantidade p {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 2px solid #D9D9D9;
     display: flex;
@@ -112,13 +101,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 30px;
-    height: 90%;
-    border: 2px solid #A4A4A4;
-    border-radius: 20px;
+    width: 75%;
+    border-left: 2px solid #A4A4A4;
 }
 
 .detalhamentoAcertosEErros {
@@ -139,17 +123,16 @@
 }
 
 .detalhamentoAcertosEErros #acertos {
-    background-color: #31C626;
-    border: 2px solid #0C4F13;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+    border-radius: 20px;
 }
 
 .detalhamentoAcertosEErros #erros {
-    background-color: #FF0000;
-    border: 2px solid #6C1818;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background-color: #D5D5D5;
+    border: 2px solid #9A9A9A;
+    border-radius: 20px;
 }
 
 .questoes {
@@ -165,10 +148,11 @@
 }
 
 .questoes p {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: 2px solid #D9D9D9;
+    background-color: #D9D9D9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,80 +163,48 @@
     cursor: pointer;
 }
 
-.numQuestao {
+.enunciadoQuestao {
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    justify-content: start;
 }
 
-.numQuestao p {
-    width: 50px;
-    height: 50px;
+.numQuestao {
+    width: 15%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid #0C4F13;
+}
+
+.numQuestao p {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000;
     border-radius: 50%;
     font-size: 20px;
     font-family: 'Kadwa';
     font-weight: bold;
     color: #FFFFFF;
-    background-color: #31C626;
+    background-color: #000;
 }
 
-.enunciadoQuestao {
-    width: 100%;
-    height: 20px;
-    align-items: center;
-}
-
-.enunciadoQuestao p {
-    margin-left: 30px;
-    font-size: 16px;
+#enunciado {
+    width: 80%;
+    font-size: 14px;
     font-family: 'Kadwa';
-}
-
-.detalhamentoDaQuestao {
-    width: 100%;
-    height: 210px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.opcoes {
-    margin-left: 30px;
-    width: 40%;
-}
-
-.opcoes ul {
-    list-style: none;
-}
-
-.opcoes ul li {
-    font-size: 16px;
-    font-family: 'Kadwa';
-    margin-top: -10px;
-}
-
-.respostaCorretaExplicacao {
-    width: 60%;
-    height: 100%;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .respostaCorreta {
-    width: 70%;
+    width: 30%;
     height: 30px;
-    border: 2px solid #124B0D;
-    margin-bottom: 10px;
+    border: 2px solid #1C8914;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,14 +215,48 @@
 .respostaCorreta p {
     color: #fff;
     font-family: 'Kadwa';
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 100;
+}
+
+.detalhamentoDaQuestao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 115px;
+}
+
+.opcoes {
+    margin-top: 0;
+    margin-left: 25px;
+    width: 40%;
+}
+
+.opcoes ul {
+    list-style: none;
+}
+
+.opcoes ul li {
+    font-size: 18px;
+    font-family: 'Kadwa';
+    margin-top: -10px;
+}
+
+.respostaCorretaExplicacao {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .explicacao {
     height: 100px;
+    width: 80%;
     border: 3px solid #A4A4A4;
-    font-size: 9px;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,5 +268,5 @@
 }
 
 .acerto {
-    border: 2px solid #31C626 !important;
+    border: 3px solid #31C626 !important;
 }

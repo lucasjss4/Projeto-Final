@@ -44,6 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .contentBusca input{
@@ -54,6 +55,7 @@
     border-radius: 5px;
     font-size: 12px;
     border: none;
+    cursor: pointer;
 }
 
 .contentBusca p{

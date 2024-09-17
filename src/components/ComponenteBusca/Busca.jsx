@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosSearch } from "react-icons/io";
 import './style.css';
 
-const Busca = () => {
+const Busca = ({isClass, gerarAtividade}) => {
     return <div className="busca">
         <div className="buscador">
              <IoIosSearch size={25}/>
@@ -10,7 +10,7 @@ const Busca = () => {
         </div>
         <div className="contentBusca">
             <p>TURMAS:</p>
-            <input type="submit" value="CRIAR EXERCÍCIO" />
+            {isClass && <input type="submit" value="CRIAR EXERCÍCIO" onClick={gerarAtividade} />}
         </div>
     </div>
 }

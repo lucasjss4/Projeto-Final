@@ -1,10 +1,14 @@
 import React from "react";
 import icon from './Vector.svg';
 import './style.css';
+import { IoCloseOutline } from "react-icons/io5";
 
-function formCriarExercicio() {
-    return <div className="container">
+function FormCriarExercicio({closeGerarAtividade}) {
+    return <div className="fundo">
         <form className="formCriarExercicio">
+            <button id="button">
+                <IoCloseOutline size={30} onClick={closeGerarAtividade} />
+            </button>
             <h1>CRIAR EXERCÍCIO</h1>
             <input type="text" placeholder="DIGITE O TEMA" className="input" />
             <input type="number" placeholder="PERGUNTAS:" className="input" />
@@ -20,4 +24,4 @@ function formCriarExercicio() {
     </div>
 }
 
-export default formCriarExercicio;
+export default FormCriarExercicio;

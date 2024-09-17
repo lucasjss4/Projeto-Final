@@ -6,10 +6,8 @@ import './header.css';
 import { IoAddOutline } from "react-icons/io5";
 
 
-function Header({ toggleSideBar, openAddClass }) {
-
-    const [isTeacher, setIsTeacher] = useState(true);
-
+function Header({ toggleSideBar, openAddClass , isTeacher}) {
+    
     return <div className="header">
         <div className="menu-logo">
             <img src={menuIcon} id="menu" onClick={toggleSideBar} />
