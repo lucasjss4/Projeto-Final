@@ -1,0 +1,1 @@
+Para configurar o projeto, precisa clonar o repositório, rodar o comando "npm install" para instalar as dependencias do npm, e para rodar o projeto precisar rodar o comando "npm run dev". A única página que precisa ser acessada pela URL é a página de atividade, sua rota é /atividade
