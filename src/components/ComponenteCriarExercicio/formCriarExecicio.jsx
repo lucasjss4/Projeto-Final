@@ -1,6 +1,6 @@
 import React from "react";
-import icon from './Vector.svg';
-import './style.css';
+import icon from '../../assets/Vector.svg';
+import './CriarExercicio.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 function FormCriarExercicio({closeGerarAtividade}) {
@@ -10,8 +10,8 @@ function FormCriarExercicio({closeGerarAtividade}) {
                 <IoCloseOutline size={30} onClick={closeGerarAtividade} />
             </button>
             <h1>CRIAR EXERCÍCIO</h1>
-            <input type="text" placeholder="DIGITE O TEMA" className="input" />
-            <input type="number" placeholder="PERGUNTAS:" className="input" />
+            <input type="text" placeholder="DIGITE O TEMA" className="input" required />
+            <input type="number" placeholder="PERGUNTAS:" className="input" required />
             <div className="file">
                 <label htmlFor="upload-file" id="labelInput">UPLOAD</label>
                 <input type="file" id="upload-file"  />

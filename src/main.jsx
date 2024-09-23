@@ -6,6 +6,7 @@ import PageAtividade from './pages/PageAtividade';
 import PageHome from './pages/PageHome';
 import PageRelatorio from './pages/PageRelatorio';
 import PageGerarAtividade from './pages/PageGerarAtividade';
+import PageRelatorioTurma from './pages/PageRelatorioTurma';
 
 
 createRoot(document.getElementById('root')).render(
@@ -14,8 +15,9 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/atividade' element={<PageAtividade />} />
         <Route path='/' element={<PageHome />} />
-        <Route path='/relatorio' element={<PageRelatorio />} />
-        <Route path='/turma' element={<PageGerarAtividade />} />
+        <Route path='/relatorio/:nome' element={<PageRelatorio />} />
+        <Route path='/turma/:nomeTurma' element={<PageGerarAtividade />} />
+        <Route path='/turma/relatorio/:nomeAtividade' element={<PageRelatorioTurma />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

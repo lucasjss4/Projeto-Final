@@ -6,31 +6,31 @@ import { HiUserGroup } from "react-icons/hi";
 import { BsGraphUp } from "react-icons/bs";
 import { BsGearFill } from "react-icons/bs";
 
-import './style.css'
+import './Menu.css'
 
-function Menu({isOpen}) {
+function Menu({isOpen}) { 
     return <div>
         <div className={`menuBar ${isOpen ? 'open' : 'close'}`}>
-            <div className="menuItem">
+            <a className="menuItem">
                 <IoMdHome size={25} />
                 <p>Inicio</p>
-            </div>
-            <div className="menuItem">
+            </a>
+            <a className="menuItem">
                 <MdOutlineWatchLater size={25} />
                 <p>Pendentes</p>
-            </div>
-            <div className="menuItem">
+            </a>
+            <a className="menuItem" href="/">
                 <HiUserGroup size={25} />
                 <p>Turmas</p>
-            </div>
-            <div className="menuItem">
+            </a>
+            <a className="menuItem">
                 <BsGraphUp size={25} />
                 <p>Resoluções</p>
-            </div>
-            <div className="menuItem">
+            </a>
+            <a className="menuItem">
                 <BsGearFill size={25} />
                 <p>Configurações</p>
-            </div>
+            </a>
         </div>
     </div>
 }

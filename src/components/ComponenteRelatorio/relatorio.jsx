@@ -1,6 +1,5 @@
 import React from "react";
-import logout from './logout.svg';
-import './style.css'
+import './relatorio.css'
 
 function Relatorio() {
     return <div>

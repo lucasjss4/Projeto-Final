@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import logo from './logo.png';
-import menuIcon from './menu-icon.png';
-import perfilIcon from './perfil.png'
+import logo from '../../assets/logo.png';
+import menuIcon from '../../assets/menu-icon.png';
+import perfilIcon from '../../assets/perfil.png';
 import './header.css';
 import { IoAddOutline } from "react-icons/io5";
 

@@ -1,16 +1,33 @@
 import React from "react";
 import { IoIosSearch } from "react-icons/io";
-import './style.css';
+import './Busca.css';
 
-const Busca = ({isClass, gerarAtividade}) => {
-    return <div className="busca">
+const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma, nomeAtividade }) => {
+    
+    const messageBusca = () => {
+        if(nomeAluno){
+            return <p>{nomeAluno}</p>;
+        }else if(nomeTurma){
+            return <p>{nomeTurma}</p>;
+        }else if(nomeAtividade){
+            return <p>{nomeAtividade}</p>;
+        }else{
+            return <p>TURMAS :</p>
+        }
+    }
+
+    return <div className={isTurmaRelatorio ? 'buscaT' : 'busca'}>
         <div className="buscador">
-             <IoIosSearch size={25}/>
-             <input type="text" />
+            <IoIosSearch size={25} />
+            <input type="text" />
         </div>
         <div className="contentBusca">
-            <p>TURMAS:</p>
+            {messageBusca()}
             {isClass && <input type="submit" value="CRIAR EXERCÍCIO" onClick={gerarAtividade} />}
+            {isTurmaRelatorio && <div className="turmaRelatorio">
+                <input type="submit" value="EXCLUIR TURMA" id="excluirTurma" />
+                <input type="submit" value="ADICIONAR ALUNO" />
+            </div>}
         </div>
     </div>
 }

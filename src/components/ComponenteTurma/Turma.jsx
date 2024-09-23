@@ -2,13 +2,20 @@ import React from "react";
 import { BsGraphUp } from "react-icons/bs";
 import { FaPencilAlt } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi";
-import './style.css';
+import './Turma.css';
 
 
 const Turma = () => {
-    return <div className="containerTurma">
+
+    const redirecionarTurma = () => {
+        window.location.href = '/turma/' + nomeTurma;
+    }
+
+    const nomeTurma = 'DS-PRO';
+
+    return <div className="containerTurma" onClick={redirecionarTurma}>
         <div className="titleTurma">
-            <p>DS-PRO</p>
+            <p>{nomeTurma}</p>
         </div>
         <div className="descriptionTurma">
             <p id="teacher">Professor 01 : xxxxxxxx</p>

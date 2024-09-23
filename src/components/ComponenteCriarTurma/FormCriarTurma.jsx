@@ -1,5 +1,5 @@
 import React from "react";
-import './style.css';
+import './CriarTurma.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 const FormCriarTurma = ({closeAddClass}) => {
@@ -9,8 +9,8 @@ const FormCriarTurma = ({closeAddClass}) => {
                 <IoCloseOutline size={30} />
             </button>
             <p>CRIAR TURMA</p>
-            <input type="text" placeholder="NOME:" />
-            <input type="text" placeholder="DESCRIÇÃO:" />
+            <input type="text" placeholder="NOME:" required/>
+            <input type="text" placeholder="DESCRIÇÃO:" required />
             <input type="text" id="senha" placeholder="SENHA DE ACESSO: (Não obrigatório)" />
             <input id="enviar" type="submit" value="CRIAR TURMA" />
         </form>

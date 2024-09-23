@@ -1,0 +1,42 @@
+.listaAluno{
+    width: 90%;
+    height: 90px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 50px ;
+    border-bottom-right-radius: 20px ;
+    border-bottom-left-radius: 50px ;
+    background-color: #D9D9D9;
+}
+
+.sideLeft img{
+    width: 70px;
+    height: 70px;
+}
+
+.info{
+    padding: 7px 7px 10px 10px;
+    width: 210px;
+}
+
+.excluirAluno{
+    display: flex;
+    justify-content: end;
+    height: 65%;
+    align-items: start;
+    cursor: pointer;
+}
+
+.relatorioAluno{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.relatorioAluno p{
+    cursor: pointer;
+}

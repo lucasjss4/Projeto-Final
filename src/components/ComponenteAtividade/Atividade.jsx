@@ -1,6 +1,6 @@
 import React from "react";
-import logout from './logout.svg';
-import './style.css';
+import logout from '../../assets/logout.svg';
+import './Atividade.css';
 
 
 function Atividade() {
