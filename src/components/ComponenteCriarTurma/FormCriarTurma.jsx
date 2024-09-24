@@ -4,9 +4,9 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const FormCriarTurma = ({closeAddClass}) => {
     return <div className="fundo">
-        <form id="criarTurma">
-            <button onClick={closeAddClass} id="button">
-                <IoCloseOutline size={30} />
+        <form id="criarTurma" >
+            <button type="button" id="button"  >
+                <IoCloseOutline size={30} onClick={closeAddClass}  />
             </button>
             <p>CRIAR TURMA</p>
             <input type="text" placeholder="NOME:" required/>

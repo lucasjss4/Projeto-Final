@@ -16,11 +16,11 @@ const PageHome = () => {
     const [isCreateClass, setCreateClass] = useState(false);
 
     const openAddClass = () => {
-        setCreateClass(prevState => !prevState);
+        setCreateClass(true);
     }
 
     const closeAddClass = () => {
-        setCreateClass(prevState => !prevState);
+        setCreateClass(false);
     }
 
     const [isClass, setClass] = useState(false);
@@ -28,14 +28,14 @@ const PageHome = () => {
     const [isTeacher, setTeacher] = useState(true);
 
     return <>
-        {isCreateClass && <FormCriarTurma closeAddClas={closeAddClass} />}
+        {isCreateClass && <FormCriarTurma closeAddClass={closeAddClass} />}
         <Header toggleSideBar={toggleSideBar} openAddClass={openAddClass} isTeacher={isTeacher} />
         <div className="container"> 
             <Menu isOpen={isSideBarOpen} />
             <div className="content">
                 <Busca isClass={isClass} />
                 <div className="contentTurma">
-                    <Turma />
+                    <Turma />   
                 </div>
             </div>
         </div>

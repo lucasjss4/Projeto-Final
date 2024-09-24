@@ -4,7 +4,7 @@ import './CriarExercicio.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 function FormCriarExercicio({closeGerarAtividade}) {
-    return <div className="fundo">
+     return <div className="fundo">
         <form className="formCriarExercicio">
             <button id="button">
                 <IoCloseOutline size={30} onClick={closeGerarAtividade} />

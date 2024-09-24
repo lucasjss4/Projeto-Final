@@ -6,7 +6,16 @@
 .menuBar{
     height: 99.5%;
     width: 200px;
+    left: -250px;
+    position: relative;
 }
+
+.open{
+    left: 0;
+    margin-right: 0;
+    transition: left 0.3s linear;
+}
+
 
 .menuItem{
     width: 180px;
@@ -32,5 +41,6 @@
 }
 
 .close{
-    display: none;
+    margin-right: -250px;
+    transition: margin-right 0.3s linear;
 }

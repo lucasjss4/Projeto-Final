@@ -1,8 +1,8 @@
 .listaAluno{
-    width: 90%;
+    width: 97%;
     height: 90px;
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
