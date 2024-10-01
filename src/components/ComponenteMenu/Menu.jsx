@@ -11,11 +11,11 @@ import './Menu.css'
 function Menu({isOpen}) { 
     return <div>
         <div className={`menuBar ${isOpen ? 'open' : 'close'}`}>
-            <a className="menuItem">
+            <a className="menuItem" href="/">
                 <IoMdHome size={25} />
                 <p>Inicio</p>
             </a>
-            <a className="menuItem">
+            <a className="menuItem" href="/pendentes">
                 <MdOutlineWatchLater size={25} />
                 <p>Pendentes</p>
             </a>

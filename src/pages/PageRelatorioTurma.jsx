@@ -35,6 +35,8 @@ const PageRelatorioTurma = () => {
 
     const [isTurmaRelatorio, setTurmaRelatorio] = useState(true);
 
+    const isPending = true;
+
     return <>
         <Header toggleSideBar={toggleSideBar} openAddClass={openAddClass} isTeacher={isTeacher} />
         <div className="container">
@@ -42,12 +44,12 @@ const PageRelatorioTurma = () => {
             <div className="content" style={{border : "none"}}>
                 <Busca isClass={isClass} isTurmaRelatorio={isTurmaRelatorio} nomeAtividade={nomeAtividade}/>
                 <div className="contentAlunos">
-                    <ListaAluno nomeAluno={aluno1} />
-                    <ListaAluno nomeAluno={aluno2} />
-                    <ListaAluno nomeAluno={aluno3} />
-                    <ListaAluno nomeAluno={aluno4} />
-                    <ListaAluno nomeAluno={aluno4} />
-                    <ListaAluno nomeAluno={aluno4} />   
+                    <ListaAluno nomeAluno={aluno1} isPending={isPending} />
+                    <ListaAluno nomeAluno={aluno2} isPending={isPending} />
+                    <ListaAluno nomeAluno={aluno3} isPending={isPending} />
+                    <ListaAluno nomeAluno={aluno4} isPending={isPending} />
+                    <ListaAluno nomeAluno={aluno4} isPending={isPending} />
+                    <ListaAluno nomeAluno={aluno4} isPending={isPending} />   
                 </div>
             </div>
         </div>

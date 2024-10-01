@@ -1,0 +1,79 @@
+.contentLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.login{
+    height: 700px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title{
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: black;
+}
+
+#google {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border: 2px solid #A2A2A2;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0);
+    cursor: pointer;
+}
+
+.inputText{
+    width: 92%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding-left: 10px;
+    background-color: #E5E5E5;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    color: #727272;
+    height: 40px;
+}
+
+.inputText::placeholder{
+    color: #727272;
+}
+
+#login{
+    width: 95%;
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#redefinirSenha{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #007BE5;
+    cursor: pointer;
+}
+
+#termo {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 9px;
+    color: #999999;
+    margin-bottom: 10px;
+}

@@ -2,30 +2,34 @@ import React, { useState } from "react";
 import Header from "../components/ComponenteHeader/header";
 import Menu from "../components/ComponenteMenu/Menu";
 import Busca from "../components/ComponenteBusca/Busca";
-import Relatorio from "../components/ComponenteRelatorio/relatorio";
-import { useParams } from "react-router-dom";
+import ListaPendentes from "../components/ComponentePendente/ListaPendentes";
 
-const PageRelatorio = () => {
-    const {nome} = useParams();
-
-    const [isSideBarOpen, setSideBarOpen] = useState(true);
+const PagePendentes = () => {
+    
+    const [isSideBarOpen, setSideBarOpen] = useState(false);
 
     const toggleSideBar = () => {
         setSideBarOpen(prevState => !prevState);
     }
     
-    const [isClass, setClass] = useState(false);
+    const nomeTurma = 'PENDENTES :';
 
+    const nomeDaTurma = 'DS - PRO';
+
+    const isClass = true;
+    
     return <>
         <Header toggleSideBar={toggleSideBar} />
         <div className="container">
             <Menu isOpen={isSideBarOpen} />
             <div className="content">
-                <Busca isClass={isClass} nomeAluno={nome} />
-                <Relatorio />
+                <Busca nomeTurma={nomeTurma} />
+                <div className="contentAtividades">
+                    <ListaPendentes nomeDaTurma={nomeDaTurma} isClass={isClass} />
+                </div>
             </div>
         </div>
     </>
 }
 
-export default PageRelatorio;
+export default PagePendentes;

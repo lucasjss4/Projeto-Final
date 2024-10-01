@@ -5,7 +5,7 @@ import { BsGraphUp } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 
 
-const ListaAluno = ({nomeAluno}) => {
+const ListaAluno = ({ nomeAluno, isPending }) => {
 
     const redirecionandoParaRelatorio = () => {
 
@@ -20,7 +20,7 @@ const ListaAluno = ({nomeAluno}) => {
                 <p>{nomeAluno}</p>
             </div>
         </div>
-        <div className="info">
+        {isPending && <div className="info">
             <div className="excluirAluno">
                 <MdDelete size={25} />
             </div>
@@ -28,7 +28,7 @@ const ListaAluno = ({nomeAluno}) => {
                 <BsGraphUp size={20} />
                 <p onClick={redirecionandoParaRelatorio}>VER RELATÓRIO</p>
             </div>
-        </div>
+        </div>}
     </div>
 }
 

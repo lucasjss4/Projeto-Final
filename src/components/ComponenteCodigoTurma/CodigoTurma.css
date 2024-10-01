@@ -1,0 +1,41 @@
+.codigoTurma{
+    width: 400px;
+    height: 300px;
+    border: 1px solid #D6D6D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#button{
+    margin-top: -250px;
+}
+
+.codigoTurma p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.codigoTurma input{
+    width: 80%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 3px solid #cacaca;
+}
+
+.codigoTurma #entrar{
+    width: 86%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}

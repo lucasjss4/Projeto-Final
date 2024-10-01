@@ -3,7 +3,7 @@ import './CriarTurma.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 const FormCriarTurma = ({closeAddClass}) => {
-    return <div className="fundo">
+    return <div id="fundo" className="fundo">
         <form id="criarTurma" >
             <button type="button" id="button"  >
                 <IoCloseOutline size={30} onClick={closeAddClass}  />
