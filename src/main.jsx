@@ -13,6 +13,7 @@ import PagePendenteTurma from './pages/PagePendentesTurma';
 import PageAlunosDevedores from './pages/PageAlunosDevendo';
 import PageLogin from './pages/PageLogin';
 import PageCadastro from './pages/PageCadastro';
+import PageSelecionarAtividade from './pages/PageSelecionarAtividade';
 
 
 createRoot(document.getElementById('root')).render(
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<PageHome />} />
         <Route path='/relatorio/:nome' element={<PageRelatorio />} />
         <Route path='/turma/:nomeTurma' element={<PageGerarAtividade />} />
+        <Route path='/:nomeTurma' element={<PageSelecionarAtividade />} />
         <Route path='/turma/relatorio/:nomeAtividade' element={<PageRelatorioTurma />} />
         <Route path='/aluno' element={<PageHomeAlunos />} />
         <Route path='/pendentes' element={<PagePendentes />} />

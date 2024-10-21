@@ -6,6 +6,7 @@
 .containerAtividade {
     width: 100%;
     display: flex;
+    border-left: 2px solid #D9D9D9;
 }
 
 .exercicio {

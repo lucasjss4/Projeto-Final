@@ -3,6 +3,7 @@ import CodigoTurma from "../components/ComponenteCodigoTurma/CodigoTurma";
 import Header from "../components/ComponenteHeader/header";
 import Busca from "../components/ComponenteBusca/Busca";
 import Menu from "../components/ComponenteMenu/Menu";
+import Turma from "../components/ComponenteTurma/Turma";
 
 const PageHomeAlunos = () => {
 
@@ -24,6 +25,8 @@ const PageHomeAlunos = () => {
         setEnterClass(prevState => !prevState);
     }
 
+    const [isAluno, setAluno] = useState(true);
+
     return <>
         {isEnterInClass && <CodigoTurma fecharTurma={fecharTurma} />}
         <Header toggleSideBar={toggleSideBar} />
@@ -31,6 +34,9 @@ const PageHomeAlunos = () => {
             <Menu isOpen={isSideBarOpen} />
             <div className="content">
                 <Busca isTurma={isTurma} abrirTurma={abrirTurma} />
+                <div className="contentTurma">
+                    <Turma isAluno={isAluno} />
+                </div>
             </div>
         </div>
     </>

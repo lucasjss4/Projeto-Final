@@ -3,12 +3,10 @@ import Header from "../components/ComponenteHeader/header";
 import Menu from "../components/ComponenteMenu/Menu";
 import Busca from "../components/ComponenteBusca/Busca";
 import FormCriarExercicio from "../components/ComponenteCriarExercicio/formCriarExecicio";
-import ListaAtividade from "../components/ComponenteListaAtividade/ListaAtividade";
 import { useParams } from "react-router-dom";
+import ListaAtividadeAluno from "../components/ComponenteListaAtividadeAluno/ListaAtividadeAluno";
 
-const PageGerarAtividade = () => {
-
-    const aluno = localStorage.getItem('aluno');
+const PageSelecionarAtividade = () => {
 
     const { nomeTurma } = useParams();
 
@@ -34,23 +32,18 @@ const PageGerarAtividade = () => {
 
     const tituloAtividade = "Atividade de aprendizado - Trigonometria";
 
-    const relatorioTurma = () => {
-        window.location.href = "/turma/relatorio/" + tituloAtividade;
-    }
-
     return <>
-        {isCreateActivity && <FormCriarExercicio closeGerarAtividade={closeGerarAtividade} />}
         <Header toggleSideBar={toggleSideBar} isTeacher={isTeacher} />
         <div className="container">
             <Menu isOpen={isSideBarOpen} />
             <div className="content">
-                <Busca isClass={isClass} gerarAtividade={gerarAtividade} nomeTurma={nomeTurma} />
+                <Busca nomeTurma={nomeTurma} />
                 <div className="contentAtividade">
-                    <ListaAtividade tituloAtividade={tituloAtividade} relatorioTurma={relatorioTurma} />
+                    <ListaAtividadeAluno tituloAtividade={tituloAtividade} />
                 </div>
             </div>
         </div>
     </>
 }
 
-export default PageGerarAtividade;
+export default PageSelecionarAtividade;

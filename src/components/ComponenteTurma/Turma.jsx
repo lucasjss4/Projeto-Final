@@ -5,10 +5,18 @@ import { HiUserGroup } from "react-icons/hi";
 import './Turma.css';
 
 
-const Turma = () => {
+const Turma = ({ isAluno }) => {
+
+    const aluno = true;
+    const alunoF = false;
 
     const redirecionarTurma = () => {
-        window.location.href = '/turma/' + nomeTurma;
+
+        if (isAluno) {
+            window.location.href = '/' + nomeTurma;
+        } else {
+            window.location.href = '/turma/' + nomeTurma;
+        }
     }
 
     const nomeTurma = 'DS-PRO';
@@ -28,7 +36,7 @@ const Turma = () => {
             <div className="infoTurma">
                 <div className="qtdPeople">
                     <p>27/30</p>
-                    <HiUserGroup  size={20}/>
+                    <HiUserGroup size={20} />
                 </div>
                 <BsGraphUp size={20} />
             </div>

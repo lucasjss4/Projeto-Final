@@ -1,0 +1,43 @@
+.atividade {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 98%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+}
+
+.sideLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    gap: 35px;
+}
+
+.titleActivity{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.infos{
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.atividadesFeitas{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.atividadesFeitas svg{
+    cursor: pointer;
+}

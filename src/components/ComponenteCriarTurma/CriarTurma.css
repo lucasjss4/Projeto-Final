@@ -87,13 +87,13 @@
 }
 
 #button{
-    position: fixed;
+    position: absolute;
     border: none;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;   
-    margin-top: -410px;
-    margin-left: 350px;
+    top: 54%;
+    left: 61%;
     cursor: pointer;
 }
