@@ -15,6 +15,7 @@ import PageLogin from './pages/PageLogin';
 import PageCadastro from './pages/PageCadastro';
 import PageSelecionarAtividade from './pages/PageSelecionarAtividade';
 import PageEscolha from './pages/PageEscolha';
+import PageConfiguracao from './pages/PageConfiguracao';
 
 
 createRoot(document.getElementById('root')).render(
@@ -34,6 +35,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/login' element={<PageLogin />} />
         <Route path='/cadastro' element={<PageCadastro />} />
         <Route path='/escolha' element={<PageEscolha />} />
+        <Route path='/configuracao' element={<PageConfiguracao />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

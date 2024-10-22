@@ -7,6 +7,7 @@ import { BsGraphUp } from "react-icons/bs";
 import { BsGearFill } from "react-icons/bs";
 
 import './Menu.css'
+import Configuracao from "../ComponenteConfiguracao/Configuracao";
 
 function Menu({isOpen}) { 
     return <div>
