@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Kadwa';
+    src: url('/src/fonts/Kadwa-Regular.ttf');
+}
+
+.adicionarAluno{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #d6d6d6;
+    border-radius: 20px ;
+}
+
+.adicionarAluno h1{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Kadwa' ;
+    font-weight: 100;
+}
+
+#infoCodigo{
+    font-size: 9px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.codigoSala{
+    width: 90%; 
+    border: 3px solid #CACACA;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 60px;
+    border-radius: 10px;
+}
+
+#titleCodigo{
+    margin-left: 10px;
+    color: #CACACA;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+#codigoTurma{
+    color: #9A9A9A;
+    font-size: 20px;
+}

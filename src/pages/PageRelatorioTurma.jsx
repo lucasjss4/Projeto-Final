@@ -4,6 +4,7 @@ import Menu from "../components/ComponenteMenu/Menu";
 import Busca from "../components/ComponenteBusca/Busca";
 import ListaAluno from "../components/ComponenteListaAluno/ListaAluno";
 import { useParams } from "react-router-dom";
+import AdicionarAluno from "../components/ComponenteAdicionarAluno/AdicionarAluno";
 
 const PageRelatorioTurma = () => {
     const {nomeAtividade} = useParams();
@@ -37,12 +38,23 @@ const PageRelatorioTurma = () => {
 
     const isPending = true;
 
+    const [isAddStudent, setAddStudent] = useState(false);
+
+    const closeAddStudent = () => {
+        setAddStudent(!isAddStudent);
+    }
+
+    const openAddStudent = () => {
+        setAddStudent(!isAddStudent);
+    }
+
     return <>
+        {isAddStudent && <AdicionarAluno closeAddStudent={closeAddStudent} />}
         <Header toggleSideBar={toggleSideBar} openAddClass={openAddClass} isTeacher={isTeacher} />
         <div className="container">
             <Menu isOpen={isSideBarOpen} />
             <div className="content" style={{border : "none"}}>
-                <Busca isClass={isClass} isTurmaRelatorio={isTurmaRelatorio} nomeAtividade={nomeAtividade}/>
+                <Busca isClass={isClass} isTurmaRelatorio={isTurmaRelatorio} nomeAtividade={nomeAtividade} openAddStudent={openAddStudent} />
                 <div className="contentAlunos">
                     <ListaAluno nomeAluno={aluno1} isPending={isPending} />
                     <ListaAluno nomeAluno={aluno2} isPending={isPending} />

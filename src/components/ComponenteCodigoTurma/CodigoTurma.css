@@ -10,7 +10,19 @@
     background-color: white;
 }
 
-#button{
+#buttonTurma{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    top: 54%;
+    left: 61%;
+    cursor: pointer;
+}
+
+#buttonTurma{
     top: 30%;
     left: 61%;
 }

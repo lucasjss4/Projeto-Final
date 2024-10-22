@@ -14,6 +14,7 @@ import PageAlunosDevedores from './pages/PageAlunosDevendo';
 import PageLogin from './pages/PageLogin';
 import PageCadastro from './pages/PageCadastro';
 import PageSelecionarAtividade from './pages/PageSelecionarAtividade';
+import PageEscolha from './pages/PageEscolha';
 
 
 createRoot(document.getElementById('root')).render(
@@ -32,6 +33,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/pendentes/:nome/alunos' element={<PageAlunosDevedores />} />
         <Route path='/login' element={<PageLogin />} />
         <Route path='/cadastro' element={<PageCadastro />} />
+        <Route path='/escolha' element={<PageEscolha />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

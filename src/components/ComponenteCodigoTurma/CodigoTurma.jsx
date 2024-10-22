@@ -5,7 +5,7 @@ import  './CodigoTurma.css';
 const CodigoTurma = ({fecharTurma}) => {
     return <div className="fundo">
         <form className="codigoTurma">
-            <button id="button">
+            <button id="buttonTurma">
                 <IoCloseOutline size={30} onClick={fecharTurma}  />
             </button>
             <p>CÓDIGO DA TURMA</p>

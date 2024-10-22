@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import './Login.css';
 
@@ -12,15 +12,25 @@ const Login = ({ login, cadastro, termo }) => {
         }
     }
 
+    const [email, setEmail] = useState('');
+
+    const envioFormulário = (event) => {
+        event.preventDefault();
+
+        localStorage.setItem('email', email);
+
+        window.location.href = '/escolha';
+    }
+
     return <div className="contentLogin">
-        <form className="login">
+        <form className="login" onSubmit={envioFormulário}>
             <p id="title">{getMessage()}</p>
             <button type="button" id="google">
                 <FaGoogle style={{ marginRight: '20px' }} />
                 CONTINUAR COM O GOOGLE
             </button>
             <p style={{ fontSize: '12px', marginTop: '20px', marginBottom: '20px' }}>ou</p>
-            <input className="inputText" type="text" placeholder="Email ou username" required />
+            <input className="inputText" onChange={(e) => setEmail(e.target.value) } type="text" placeholder="Email ou username" required />
             <input className="inputText" type="password" placeholder="Senha" required />
             <button type="submit" id="login">
                 CONECTE-SE

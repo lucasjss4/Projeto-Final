@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosSearch } from "react-icons/io";
 import './Busca.css';
 
-const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma, nomeAtividade, isTurma, abrirTurma }) => {
+const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma, nomeAtividade, isTurma, abrirTurma, openAddStudent }) => {
     
     const messageBusca = () => {
         if(nomeAluno){
@@ -27,7 +27,7 @@ const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma
             {isTurma && <input type="submit" value="ENTRAR NA TURMA" onClick={abrirTurma} />}
             {isTurmaRelatorio && <div className="turmaRelatorio">
                 <input type="submit" value="EXCLUIR TURMA" id="excluirTurma" />
-                <input type="submit" value="ADICIONAR ALUNO" />
+                <input type="submit" value="ADICIONAR ALUNO" onClick={openAddStudent} />
             </div>}
         </div>
     </div>
