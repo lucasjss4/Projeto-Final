@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosSearch } from "react-icons/io";
 import './Busca.css';
 
-const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma, nomeAtividade, isTurma, abrirTurma, openAddStudent }) => {
+const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma, nomeAtividade, isTurma, abrirTurma, openAddStudent, nome }) => {
     
     const messageBusca = () => {
         if(nomeAluno){
@@ -11,6 +11,8 @@ const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma
             return <p>{nomeTurma}</p>;
         }else if(nomeAtividade){
             return <p>{nomeAtividade}</p>;
+        }else if(nome === 'resolucoes'){
+            return <p id="resolucoes">RESOLUÇÕES :</p>
         }else{
             return <p>TURMAS :</p>
         }

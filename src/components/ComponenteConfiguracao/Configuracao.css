@@ -1,0 +1,85 @@
+.configuracao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerConfig{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerConfig p {
+    margin-top: 10px;
+    font-size: 24px;
+    color: black;
+}
+
+.configImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.configImg img{    
+    height: 140px;
+    width: 140px;
+}
+
+.configImg p{    
+    font-size: 14px;
+    margin-top: 10px;
+    color: #8E8E8E;
+    cursor: pointer;
+}
+
+.opcoesConfig{
+    width: 100%;
+}
+
+.notificacoes{
+    width: 100%;
+    border-top: 1.5px solid #818181;
+    border-bottom: 1.5px solid #818181;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificacoes input {
+    margin-right: 20px;
+}
+
+.notificacoes p {
+    font-size: 15px;
+}
+
+#notificacao{
+    font-size: 22px;
+    border-top: 2px solid #818181;
+}
+
+.first{
+    border-top: none;
+}
+
+#configTitle{
+    font-size: 24px;
+}
+
+.configConta{
+    border-top: #818181 solid 2px;
+    margin-top: 10px;
+}
+
+#phraseGoogle{
+    font-size: 14px;
+}
+
+#phraseGoogle a{
+    color: #6772FF;
+}

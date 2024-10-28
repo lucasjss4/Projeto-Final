@@ -3,23 +3,26 @@ import logo from '../../assets/logo.png';
 import menuIcon from '../../assets/menu-icon.png';
 import perfilIcon from '../../assets/perfil.png';
 import './header.css';
-import { IoAddOutline } from "react-icons/io5";
+import { IoAddOutline, IoCloseOutline } from "react-icons/io5";
 
 
-function Header({ toggleSideBar, openAddClass , isTeacher}) {
-    
+function Header({ toggleSideBar, openAddClass, isTeacher, config, sairDaPagina }) {
+
     return <div className="header">
         <div className="menu-logo">
-            <img src={menuIcon} id="menu" onClick={toggleSideBar} />
+            {config ? '' : <img src={menuIcon} id="menu" onClick={toggleSideBar} />}
             <img className="logo" src={logo} />
         </div>
+        {config && <div className="config">
+            <h1>CONFIGURAÇÕES</h1>
+        </div>}
         <div className="menu">
             {isTeacher ? <div className="addTurma">
                 <input type="checkbox" id="inputTurma" />
                 <IoAddOutline style={{ cursor: "pointer" }} size={40} />
                 <p onClick={openAddClass} >CRIAR TURMA</p>
             </div> : ''}
-            <img id="perfil" src={perfilIcon} />
+            {config ? <IoCloseOutline size={35} style={{ cursor: "pointer" }} onClick={sairDaPagina} /> : <img id="perfil" src={perfilIcon} />}
         </div>
     </div>
 }

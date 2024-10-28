@@ -5,7 +5,7 @@ import { HiUserGroup } from "react-icons/hi";
 import './Turma.css';
 
 
-const Turma = ({ isAluno }) => {
+const Turma = ({ isAluno, isResolucoes }) => {
 
     const aluno = true;
     const alunoF = false;
@@ -19,9 +19,13 @@ const Turma = ({ isAluno }) => {
         }
     }
 
+    const acessarResolucoes = () => {
+        window.location.href = '/resolucoes/' + nomeTurma;
+    }
+
     const nomeTurma = 'DS-PRO';
 
-    return <div className="containerTurma" onClick={redirecionarTurma}>
+    return <div className="containerTurma" onClick={isResolucoes ? acessarResolucoes  : redirecionarTurma}>
         <div className="titleTurma">
             <p>{nomeTurma}</p>
         </div>

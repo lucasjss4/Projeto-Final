@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter_24pt-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('../../fonts/IBMPlexSansThaiLooped-Bold.ttf');
+}
+
+.home{
+    height: calc(110vh - 100px );
+    width: 100%;
+}
+
+.buttonsHome{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.buttonsHome button {
+    margin-right: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;   
+    font-family: 'Inter';
+}
+
+.buttonsHome #buttonLogin{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #BCBCBC;
+    font-weight: 600;
+}
+
+.buttonsHome #criarConta{
+    background-color: #000;
+    color: #FFF;
+    border: 2px solid #151515;
+    font-weight: 600;
+}
+
+.homeTitle{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.homeTitle .imgHome{
+    margin-left: 50px;
+}
+
+.imgHome img{
+    width: 180px;
+    height: 180px;
+}
+
+.homeTitle .infoHome{
+    margin-left: 50px;
+    width: 1000px;
+}
+
+.infoHome #tituloHome{
+    font-size: 26px;
+    text-align: center;
+    color: #1D056E;
+    font-family: 'Inter';
+}
+
+.infoHome #slogan{
+    font-size: 36px;
+    text-align: center;
+    color: #000;
+    font-family: 'IBM';
+}
+
+.boxCarrossel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrossel{
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.cenaUm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 10%;
+    animation: 20s fade infinite;
+}
+
+.cenaDois {
+    gap: 20px;
+    position: relative;
+    top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+.box img{
+    width: 85%;
+    height: 220px;
+    border-radius: 20px;
+}
+
+.box p{
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    margin: 0;
+}
+
+
+#ds{
+    font-size: 22px;
+}
+
+@keyframes fade {
+    0%{
+        margin-left: 0;
+    }
+    40%{
+        margin-left: -1220px;
+    }
+    100%{
+        margin-left: 0;
+    }
+}

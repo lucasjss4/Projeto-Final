@@ -16,8 +16,10 @@ const EscolhaAlunoProfessor = () => {
 
         if(radioInfo === 'aluno'){
             window.location.href = '/aluno';
+            localStorage.setItem('ProfessorOrAluno', 'aluno');
         }else if(radioInfo === 'professor'){
             window.location.href = '/';
+            localStorage.setItem('ProfessorOrAluno', 'professor');
         }else{
             alert('Selecione se irá entrar como aluno ou professor');
         }
