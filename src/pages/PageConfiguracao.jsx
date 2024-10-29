@@ -16,9 +16,9 @@ const PageConfiguracao = () => {
 
     const sairDaPagina = () => {
         if(professorOuAluno === 'aluno'){
-            window.location.href = '/aluno';
+            window.location.href = '/aluno/home';
         }else if(professorOuAluno === 'professor'){
-            window.location.href = '/';
+            window.location.href = '/professor/home';
         }
     }
     

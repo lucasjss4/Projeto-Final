@@ -4,6 +4,8 @@ import './adicionarAluno.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 function AdicionarAluno({closeAddStudent}) {
+
+    /* Essa função renderiza o modal com o código para o aluno entrar na turma */
      return <div className="fundo">
         <form className="adicionarAluno">
             <button id="buttonTurma">

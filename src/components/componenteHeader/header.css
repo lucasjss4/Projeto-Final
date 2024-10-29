@@ -92,3 +92,41 @@ h6{
 .config{
     margin-left: -65px;
 }
+
+.logout{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout img{
+    margin-left: -20px !important;
+}
+
+.logout input{
+    height: 40px;
+    width: 60px;
+    position: relative;
+    opacity: 0;
+    left: 30%;
+    transform: translate(0%, 0);
+    cursor: pointer;
+}
+
+.logout .logoutButton{
+    position: fixed;
+    top: 8%;
+    left: 84%;
+    transform: translate(84%, 8%);
+    border: 1px solid #B6B6B6;
+    padding: 5px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #EDEDED ;
+    cursor: pointer;
+}

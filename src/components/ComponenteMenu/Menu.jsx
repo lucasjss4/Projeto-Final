@@ -12,34 +12,34 @@ function Menu({ isOpen }) {
     const [isAluno, setAluno] = useState(false);
 
     useEffect(() => {
-        const alunoOrProfessor = localStorage.getItem('ProfessorOrAluno');    
-    
+        const alunoOrProfessor = localStorage.getItem('ProfessorOrAluno');
+
         if (alunoOrProfessor === 'aluno') {
             setAluno(true);
         } else {
             setAluno(false);
         }
     }, []);
-
+    
     return <div>
         <div className={`menuBar ${isOpen ? 'open' : 'close'}`}>
-            <a className="menuItem" href={isAluno ? '/aluno' : '/'} >
+            <a className="menuItem" href={isAluno ? '/aluno/home' : '/professor/home'} >
                 <IoMdHome size={25} />
                 <p>Inicio</p>
             </a>
-            <a className="menuItem" href={isAluno ? '' : '/pendentes'} >
+            <a className="menuItem" href={isAluno ? '/aluno/pendentes' : '/professor/pendentes'} >
                 <MdOutlineWatchLater size={25} />
                 <p>Pendentes</p>
             </a>
-            <a className="menuItem" href={isAluno ? '/aluno' : '/'} >
+            <a className="menuItem" href={isAluno ? '/aluno/home' : '/professor/home'} >
                 <HiUserGroup size={25} />
                 <p>Turmas</p>
             </a>
-            <a className="menuItem" href={isAluno ? '/resolucoes' : '/'}>
+            <a className="menuItem" href={isAluno ? '/aluno/resolucoes' : ''}>
                 <BsGraphUp size={25} />
                 <p>Resoluções</p>
             </a>
-            <a className="menuItem" href="/configuracao">
+            <a className="menuItem" href={isAluno ? '/aluno/configuracao' : '/professor/configuracao'} >
                 <BsGearFill size={25} />
                 <p>Configurações</p>
             </a>

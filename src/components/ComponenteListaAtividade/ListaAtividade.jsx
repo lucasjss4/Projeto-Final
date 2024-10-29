@@ -5,7 +5,10 @@ import { HiUserGroup } from "react-icons/hi";
 import './ListaAtividade.css';
 
 const ListaAtividade = ({tituloAtividade, relatorioTurma}) => {
-    return <div className="atividade">
+
+    //Esse componente faz a renderização das atividades por turma, e clicando em uma das atividades mostra a lista de aluno para acessar o relátório
+
+    return <div className="atividade"  onClick={relatorioTurma}>
         <div className="sideLeft">
             <FaPencilAlt size={20} />
             <div className="titleActivity">
@@ -15,7 +18,7 @@ const ListaAtividade = ({tituloAtividade, relatorioTurma}) => {
         <div className="infos">
             <div className="atividadesFeitas">
                 <p>27/30</p>
-                <HiUserGroup size={20} onClick={relatorioTurma}/>
+                <HiUserGroup size={20}/>
             </div>
             <BsGraphUp size={20} />
         </div>

@@ -4,6 +4,7 @@ import './Login.css';
 
 const Login = ({ login, cadastro, termo }) => {
 
+    //Essa função pega a mensagem do h1 se for cadastro é "CRIE UMA CONTA", senão é login "ENTRE OU CRIE UMA CONTA"
     const getMessage = () => {
         if (login) {
             return "ENTRE OU CRIE UMA CONTA";
@@ -14,13 +15,20 @@ const Login = ({ login, cadastro, termo }) => {
 
     const [email, setEmail] = useState('');
 
+
+    //Essa função faz o envio do formulário e se caso for cadastro realiza o cadastro
     const envioFormulário = (event) => {
         event.preventDefault();
 
-        localStorage.setItem('email', email);
-
-        window.location.href = '/escolha';
+        if (cadastro) {
+            window.location.href = '/login';
+        } else {
+            window.location.href = '/escolha';
+            localStorage.setItem('email', email);
+        }
     }
+
+    //Esse componente faz a renderização do form de login
 
     return <div className="contentLogin">
         <form className="login" onSubmit={envioFormulário}>
@@ -30,16 +38,16 @@ const Login = ({ login, cadastro, termo }) => {
                 CONTINUAR COM O GOOGLE
             </button>
             <p style={{ fontSize: '12px', marginTop: '20px', marginBottom: '20px' }}>ou</p>
-            <input className="inputText" onChange={(e) => setEmail(e.target.value) } type="text" placeholder="Email ou username" required />
+            <input className="inputText" onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email ou username" required />
             <input className="inputText" type="password" placeholder="Senha" required />
             <button type="submit" id="login">
                 CONECTE-SE
             </button>
-            {termo ? 
-            <>
-                <p id="termo">Ao clicar em "Criar Conta" ou "Continuar com o google", você concorda com os termos de uso</p>
-                <p style={{fontSize : '10px', width : '150px', display : 'flex', justifyContent : 'space-around', color : '#999999'}}>JÁ TEM UMA CONTA?<a href="/login">ENTRAR</a></p>
-            </>
+            {termo ?
+                <>
+                    <p id="termo">Ao clicar em "Criar Conta" ou "Continuar com o google", você concorda com os termos de uso</p>
+                    <p style={{ fontSize: '10px', width: '150px', display: 'flex', justifyContent: 'space-around', color: '#999999' }}>JÁ TEM UMA CONTA?<a href="/login">ENTRAR</a></p>
+                </>
                 :
                 <>
                     <a href=""><p id="redefinirSenha">REDEFINIR SENHA</p></a>

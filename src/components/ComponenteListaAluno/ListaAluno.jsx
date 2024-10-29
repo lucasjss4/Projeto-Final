@@ -7,11 +7,14 @@ import { MdDelete } from "react-icons/md";
 
 const ListaAluno = ({ nomeAluno, isPending }) => {
 
+    //Essa função faz o redireciomento para o relatório de cada aluno
     const redirecionandoParaRelatorio = () => {
 
-        window.location.href = '/relatorio/' + nomeAluno;
+        window.location.href = '/professor/relatorio/' + nomeAluno;
 
     }
+
+    //Esse componente faz a redenrização da lista de alunos que já concluíram a atividade
 
     return <div className="listaAluno">
         <div className="sideLeft">

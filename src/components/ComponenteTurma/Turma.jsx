@@ -3,6 +3,7 @@ import { BsGraphUp } from "react-icons/bs";
 import { FaPencilAlt } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi";
 import './Turma.css';
+import { Navigate } from "react-router-dom";
 
 
 const Turma = ({ isAluno, isResolucoes }) => {
@@ -13,14 +14,14 @@ const Turma = ({ isAluno, isResolucoes }) => {
     const redirecionarTurma = () => {
 
         if (isAluno) {
-            window.location.href = '/' + nomeTurma;
+            window.location.href = '/aluno/selecionar/atividade/' + nomeTurma;
         } else {
-            window.location.href = '/turma/' + nomeTurma;
+           window.location.href = '/professor/turma/' + nomeTurma;
         }
     }
 
     const acessarResolucoes = () => {
-        window.location.href = '/resolucoes/' + nomeTurma;
+        window.location.href = '/aluno/resolucoes/' + nomeTurma;
     }
 
     const nomeTurma = 'DS-PRO';

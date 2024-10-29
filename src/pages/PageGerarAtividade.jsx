@@ -10,7 +10,7 @@ const PageGerarAtividade = () => {
 
     const aluno = localStorage.getItem('aluno');
 
-    const { nomeTurma } = useParams();
+    const { nome } = useParams();
 
     const [isSideBarOpen, setSideBarOpen] = useState(false);
 
@@ -35,7 +35,7 @@ const PageGerarAtividade = () => {
     const tituloAtividade = "Atividade de aprendizado - Trigonometria";
 
     const relatorioTurma = () => {
-        window.location.href = "/turma/relatorio/" + tituloAtividade;
+        window.location.href = "/professor/turma/relatorio/" + tituloAtividade;
     }
 
     return <>
@@ -44,7 +44,7 @@ const PageGerarAtividade = () => {
         <div className="container">
             <Menu isOpen={isSideBarOpen} />
             <div className="content">
-                <Busca isClass={isClass} gerarAtividade={gerarAtividade} nomeTurma={nomeTurma} />
+                <Busca isClass={isClass} gerarAtividade={gerarAtividade} nomeTurma={nome} />
                 <div className="contentAtividade">
                     <ListaAtividade tituloAtividade={tituloAtividade} relatorioTurma={relatorioTurma} />
                 </div>

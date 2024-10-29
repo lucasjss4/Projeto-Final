@@ -87,7 +87,7 @@
 }
 
 .carrossel{
-    width: 1200px;
+    width: 1800px;
     height: 400px;
     display: flex;
     flex-wrap: nowrap;
@@ -154,7 +154,7 @@
         margin-left: 0;
     }
     40%{
-        margin-left: -1220px;
+        margin-left: -1100px;
     }
     100%{
         margin-left: 0;

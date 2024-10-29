@@ -3,6 +3,9 @@ import './CriarTurma.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 const FormCriarTurma = ({closeAddClass}) => {
+
+    //Esse componente faz a renderização do modal do formulário de criação de turmas
+
     return <div id="fundo" className="fundo">
         <form id="criarTurma" >
             <button type="button" id="button"  >

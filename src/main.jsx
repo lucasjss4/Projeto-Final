@@ -1,6 +1,6 @@
 import { StrictMode, useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import PageAtividade from './pages/PageAtividade';
 import PageRelatorio from './pages/PageRelatorio';
@@ -20,11 +20,16 @@ import PageSelecionarResolucao from './pages/PageSelecionarResolucao';
 import PageRelatorioResolucao from './pages/PageRelatorioResolucao';
 import PageHomeProfessor from './pages/PageHomeProfessor';
 import PageHome from './pages/PageHome';
+import ProfessorRoutes from './routes/ProfessorRoutes';
+import PageLogout from './pages/PageLogout';
+import AlunoRoutes from './routes/AlunoRoutes';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+
+    <Router>
+
       <Routes>
 
         {/* Rotas do públicas */}
@@ -32,26 +37,16 @@ createRoot(document.getElementById('root')).render(
         <Route path='/login' element={<PageLogin />} />
         <Route path='/cadastro' element={<PageCadastro />} />
         <Route path='/escolha' element={<PageEscolha />} />
+        <Route path='/logout' element={<PageLogout />} />
 
         {/* Rotas do professor */}
-        <Route path='/professor' element={<PageHomeProfessor />} />
-        <Route path='/relatorio/:nome' element={<PageRelatorio />} />
-        <Route path='/turma/:nomeTurma' element={<PageGerarAtividade />} />
-        <Route path='/:nomeTurma' element={<PageSelecionarAtividade />} />
-        <Route path='/turma/relatorio/:nomeAtividade' element={<PageRelatorioTurma />} />
-        <Route path='/pendentes' element={<PagePendentes />} />
-        <Route path='/pendentes/:nome' element={<PagePendenteTurma />} />
-        <Route path='/pendentes/:nome/alunos' element={<PageAlunosDevedores />} />
+        <Route path='/professor/*' element={<ProfessorRoutes />} />
 
         {/* Rotas do aluno */}
-        <Route path='/aluno' element={<PageHomeAlunos />} />
-        <Route path='/configuracao' element={<PageConfiguracao />} />
-        <Route path='/resolucoes' element={<PageResolucoes />} />
-        <Route path='/resolucoes/:nome' element={<PageSelecionarResolucao />} />
-        <Route path='/resolucoes/relatorio/:nome' element={<PageRelatorioResolucao />} />
-        <Route path='/atividade' element={<PageAtividade />} />
+        <Route path='/aluno/*' element={<AlunoRoutes />} />
 
       </Routes>
-    </BrowserRouter>
+
+    </Router>
   </StrictMode>
 )

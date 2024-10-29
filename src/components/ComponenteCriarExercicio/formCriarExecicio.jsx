@@ -4,6 +4,9 @@ import './CriarExercicio.css';
 import { IoCloseOutline } from "react-icons/io5";
 
 function FormCriarExercicio({closeGerarAtividade}) {
+
+    //Esse componente faz a renderização do modal do formulário para criar um exercício 
+
      return <div className="fundo">
         <form className="formCriarExercicio">
             <button id="button">

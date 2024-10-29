@@ -3,7 +3,9 @@ import { IoIosSearch } from "react-icons/io";
 import './Busca.css';
 
 const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma, nomeAtividade, isTurma, abrirTurma, openAddStudent, nome }) => {
+    //Todas as propriedades são para inserir botões ou retirar depende de onde está vindo ele
     
+    //Essa função faz a troca das mensagens que ficam no componente, todas as opçoes ficam na mesma posição
     const messageBusca = () => {
         if(nomeAluno){
             return <p>{nomeAluno}</p>;
@@ -18,6 +20,7 @@ const Busca = ({ isClass, gerarAtividade, nomeAluno, isTurmaRelatorio, nomeTurma
         }
     }
 
+    // Esse componente renderiza o campo de busca, que pode conter vários botões que ficam ocultos dependendo das telas
     return <div className={isTurmaRelatorio ? 'buscaT' : 'busca'}>
         <div className="buscador">
             <IoIosSearch size={25} />

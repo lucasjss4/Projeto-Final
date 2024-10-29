@@ -6,10 +6,13 @@ import './ListaAtividadeAluno.css';
 
 const ListaAtividadeAluno = ({tituloAtividade}) => {
 
+
+    //Essa função faz o redirecinamento para a página de atividade
     const redirecionarAtividade = () => {
-        window.location.href = '/atividade';
+        window.location.href = '/aluno/atividade';
     }
 
+    //Esse componente que renderiza a lista de atividades por turma
     return <div className="atividade" style={{cursor: "pointer"}} onClick={redirecionarAtividade}>
         <div className="sideLeft">
             <FaPencilAlt size={20} />

@@ -7,20 +7,20 @@ import './ListaPendentes.css';
 const ListaPendentes = ({ nomeDaTurma, isClass }) => {
     
     const pagePendenteTurma = () => {
-        window.location.href = '/pendentes/' + nomeDaTurma;
+        window.location.href = '/professor/pendentes/' + nomeDaTurma;
     }
 
     const pageAlunosDevedores = () => {
-        window.location.href = '/pendentes/' + nomeDaTurma + '/alunos';
+        window.location.href = '/professor/pendentes/' + nomeDaTurma + '/alunos';
     }
    
-   return <div className="pendentes">
+   return <div className="pendentes" onClick={isClass ? pagePendenteTurma : pageAlunosDevedores }>
         <div className="nomeDaTurma">
             <p>{nomeDaTurma}</p>
         </div>
         <div className="icones">
             <p>03/30</p>
-            {isClass ? <MdOutlineWatchLater id="watch" size={25} onClick={pagePendenteTurma} /> : <HiUserGroup id="group" onClick={pageAlunosDevedores} size={25} />}
+            {isClass ? <MdOutlineWatchLater id="watch" size={25} /> : <HiUserGroup id="group"  size={25} />}
             <BsGraphUp size={25} />
         </div>
     </div>

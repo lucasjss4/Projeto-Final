@@ -8,6 +8,7 @@
     justify-content: space-between;
     border-radius: 50px;
     background-color: #D9D9D9;
+    cursor: pointer;
 }
 
 .sideLeft{

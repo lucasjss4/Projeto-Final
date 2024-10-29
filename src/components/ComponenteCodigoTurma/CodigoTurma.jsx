@@ -3,6 +3,9 @@ import { IoCloseOutline } from "react-icons/io5";
 import  './CodigoTurma.css';
 
 const CodigoTurma = ({fecharTurma}) => {
+    
+    //Esse componente faz a renderização do modal para entrar na turma com o código do professor
+
     return <div className="fundo">
         <form className="codigoTurma">
             <button id="buttonTurma">

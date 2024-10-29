@@ -3,6 +3,9 @@ import perfil from '../../assets/perfil.png';
 import './Configuracao.css';    
 
 const Configuracao = () => {
+
+    //Esse componente faz a renderização da página de configuração do perfil
+
     return <div className="configuracao" >
         <div className="headerConfig">
             <p>PERFIL</p>

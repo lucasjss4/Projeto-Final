@@ -8,17 +8,21 @@ const EscolhaAlunoProfessor = () => {
 
     const [radioInfo, setRadioInfo] = useState('');
 
+    //Função que pega qual input radio foi enviado pelo formulário e insere no state radioInfo
     const handleChange = (e) => {
         setRadioInfo(e.target.value);
     }
 
+    //Essa função faz o direcionamento a partir da escolha do usuário
+    //Se o usuário não escolheu nenhuma opção ele irá emitir um alert
+
     const irParaProximaPagina = () => {
 
         if(radioInfo === 'aluno'){
-            window.location.href = '/aluno';
+            window.location.href = '/aluno/home';
             localStorage.setItem('ProfessorOrAluno', 'aluno');
         }else if(radioInfo === 'professor'){
-            window.location.href = '/';
+            window.location.href = '/professor/home';
             localStorage.setItem('ProfessorOrAluno', 'professor');
         }else{
             alert('Selecione se irá entrar como aluno ou professor');
@@ -26,6 +30,9 @@ const EscolhaAlunoProfessor = () => {
 
     }
 
+
+    //Esse componente faz a renderização da página de escolha entre aluno e professor
+    //A partir da escolha só é possível acessar as dependências de aluno ou professor
 
     return <div className="escolha">
         <div className="imgEscolha">

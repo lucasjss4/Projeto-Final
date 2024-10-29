@@ -12,6 +12,9 @@ import ds from '../../assets/desenvolvimentoSistemas.webp';
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    //Esse componente faz a renderização da página home do site
+
     return <div className="home">
         <div className="buttonsHome">
             <button id="buttonLogin" type="submit" onClick={() => window.location.href = '/login'}>Login</button>
@@ -26,6 +29,8 @@ const Home = () => {
                 <p id="slogan">O QUE VAMOS APRENDER HOJE OU ENSINAR HOJE ?</p>
             </div>
         </div>
+
+        {/* Carrosel de imagens, com as algumas matérias que podem ser trabalhadas no site */}
         <div className="boxCarrossel">
             <div className="carrossel">
                 <div className="cenaUm">
